@@ -172,14 +172,14 @@ class os_t:
 			self.console_str = ""
 
 	def interpret_cmd(self, cmd):
-		if cmd == "bye":
+		if cmd == "shutdown":
 			self.cpu.cpu_alive = False
 			return
-		if cmd == "tasks":
+		if cmd == "jobs":
 			return self.task_table_print() #Nao estava implementado 
-		if cmd[:3] == "run":
+		if cmd[:3] == "start":
 			return self.run_task(cmd)
-		if cmd[:4] == "kill":
+		if cmd[:4] == "shut":
 			return self.kill_task(cmd)
 		self.terminal.console_print("\rinvalid cmd " + cmd + "\n")
 

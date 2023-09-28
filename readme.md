@@ -12,15 +12,14 @@ O binário do compilador é o **pasm**.
 
 # Sobre o conjunto de instruções
 
-A especificação do conjunto de instruções pode ser consultada na aula que ministro, em **docs/12-instrucoes-codificacao.pdf**.
+A especificação do conjunto de instruções pode ser consultada na aula que ministro, 
+em **docs/12-instrucoes-codificacao.pdf**.
 
 Importante apenas ressaltar os seguintes pontos:
-
 - 8 registradores de propósito geral
-
 - Os registradores são de 16 bits
-
-- Cada palavra da memória também tem 16 bits, de forma que o endereço 0 (zero) referencia os bytes 0 e 1, o endereço 1 referencia os bytes 2 e 3, e assim por diante.
+- Cada palavra da memória também tem 16 bits, de forma que o endereço 0 (zero) 
+referencia os bytes 0 e 1, o endereço 1 referencia os bytes 2 e 3, e assim por diante.
 
 # Sobre o código gerado
 
@@ -35,25 +34,20 @@ O início do código gerado ficará da seguinte forma:
 Dessa forma, um simulador para tal arquitetura deverá setar como endereço inicial do registrador **pc** o endereço **1**.
 
 
-# RUNING
+# RODANDO O PROJETO
 
 Para rodar o projeto antes temos que
-- compilar os arquivos asm em .bin (já estão compilados)
-- executar o make na raiz (já estão compilados)
+Caso seja a primeira vez, deve realizar a compilação dos arquivos asm para .bin, neste repositório já estão compilados.
+O comando para compilar é Make e deve ser realizado na pasta raíz do projeto.
 
-após termos o projeto completo, basta executar
- python2 pysim.py
+Para rodar o projeto deverá ser o comando: python2 pysim.py
+ 
 
-Comandos:
+# Comandos:
 
-**bye** -> sair do sitema
-
-**tasks** -> apresenta as tasks rodando
-
-**run** -> roda a função requisitada em um novo processo
-
-```run print.bin```
-
-**kill**-> mata o processo informado
-
-```kill print.bin```
+*shutdown*: Encerrar o sistema.
+*jobs*: Atividades em andamento no sistema.
+*start*: Roda a função requisitada em um novo processo
+**start print.bin**
+*shut {job}* -> Encerra o processo
+**shut print.bin**
